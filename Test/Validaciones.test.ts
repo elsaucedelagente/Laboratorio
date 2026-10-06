@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ErrorSimulacion } from "../src/ErrorSimulación";
+import { ErrorSimulacion } from "../src/ErrorSimulacion";
 import { exigir, exigirEnteroPositivo } from "../src/Validaciones";
 
 describe("Validaciones", () => {

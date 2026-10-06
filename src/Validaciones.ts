@@ -1,4 +1,4 @@
-import { ErrorSimulacion } from "./ErrorSimulación";
+import { ErrorSimulacion } from "./ErrorSimulacion";
 
 // Validaciones compartidas: si algo es invalido se lanza un ErrorSimulacion con un mensaje claro.
 // `asserts condicion` le avisa a TypeScript que, si la funcion retorna, la condicion es verdadera.
