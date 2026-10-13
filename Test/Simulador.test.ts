@@ -216,3 +216,43 @@ describe("Simulador: determinismo y avance hasta el final", () => {
         expect(simulador.pidsTerminados()).toEqual(["2"]);
     });
 });
+describe("Simulador: registro y consultas", () => {
+    it("registrarProceso crea un proceso comun o con E/S segun el evento", () => {
+        const simulador = new Simulador(2, 1024);
+        simulador.registrarProceso("1", 300, 3, new EventoES(1, 2));
+        simulador.registrarProceso("2", 200, 2);
+        avanzar(simulador, 2);
+        expect(simulador.pidsBloqueados()).toEqual(["1"]);
+        expect(simulador.procesoEnCpu()).toBe("2");
+    });
+
+    it("nombrePolitica es Primer-Ajuste por defecto", () => {
+        expect(new Simulador().nombrePolitica()).toBe("Primer-Ajuste");
+    });
+
+    it("procesos devuelve todos los procesos en orden de registro", () => {
+        const simulador = escenarioES();
+        expect(simulador.procesos().map(info => info.pid)).toEqual(["1", "2", "3"]);
+    });
+
+    it("cantidadPorEstado cuenta los procesos de cada estado", () => {
+        const simulador = escenarioES();
+        expect(simulador.cantidadPorEstado(EstadoProceso.NUEVO)).toBe(3);
+        avanzar(simulador, 1);
+        expect(simulador.cantidadPorEstado(EstadoProceso.BLOQUEADO)).toBe(1);
+        expect(simulador.cantidadPorEstado(EstadoProceso.LISTO)).toBe(2);
+    });
+
+    it("estados describe cada proceso como pid: ESTADO", () => {
+        const simulador = escenarioES();
+        avanzar(simulador, 1);
+        expect(simulador.estados()).toEqual(["1: BLOQUEADO", "2: LISTO", "3: LISTO"]);
+    });
+
+    it("metricasMemoria informa ocupada, libre y mayor hueco", () => {
+        const simulador = escenarioES();
+        avanzar(simulador, 3);
+        const metricas = simulador.metricasMemoria();
+        expect([metricas.total, metricas.ocupada, metricas.libre, metricas.mayorHueco]).toEqual([1024, 400, 624, 424]);
+    });
+});
