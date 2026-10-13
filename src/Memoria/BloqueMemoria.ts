@@ -1,4 +1,4 @@
-import { exigir, exigirEnteroPositivo } from "./Validaciones";
+import { exigir, exigirEnteroPositivo } from "../Simulador/Validaciones";
 
 // Un pedazo contiguo de memoria: libre (sin pid) u ocupado por un proceso. Es de solo lectura:
 // para dividir o fusionar, el gestor crea bloques nuevos.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { BloqueMemoria } from "../src/BloqueMemoria";
+import { BloqueMemoria } from "../src/Memoria/BloqueMemoria";
 
 describe("BloqueMemoria", () => {
     it("un bloque sin pid esta libre", () => {

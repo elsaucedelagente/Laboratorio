@@ -1,7 +1,7 @@
-import { EstadoProceso } from "./EstadoProceso";
+import { EstadoProceso } from "../Proceso/EstadoProceso";
 import { PlanificadorCpu, ResultadoCpu, ResultadoTick } from "./PlanificadorCpu";
-import { Proceso } from "./Proceso";
-import { exigirEnteroPositivo } from "./Validaciones";
+import { Proceso } from "../Proceso/Proceso";
+import { exigirEnteroPositivo } from "../Simulador/Validaciones";
 
 // Round-Robin (RF07): una sola CPU y una cola FIFO de procesos listos. Cada proceso usa la CPU
 // como maximo `quantum` ticks seguidos. Cuenta un cambio de contexto por cada expulsion con otros

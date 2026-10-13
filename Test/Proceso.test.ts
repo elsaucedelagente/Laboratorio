@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { EstadoProceso } from "../src/EstadoProceso";
-import { EventoES } from "../src/EventoES";
-import { Proceso } from "../src/Proceso";
-import { ProcesoConES } from "../src/ProcesoConES";
+import { EstadoProceso } from "../src/Proceso/EstadoProceso";
+import { EventoES } from "../src/Proceso/EventoES";
+import { Proceso } from "../src/Proceso/Proceso";
+import { ProcesoConES } from "../src/Proceso/ProcesoConES";
 
 describe("Proceso", () => {
     it("nace en estado NUEVO", () => {

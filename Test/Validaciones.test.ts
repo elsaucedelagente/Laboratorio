@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { ErrorSimulacion } from "../src/ErrorSimulacion";
-import { exigir, exigirEnteroPositivo } from "../src/Validaciones";
+import { ErrorSimulacion } from "../src/Simulador/ErrorSimulacion";
+import { exigir, exigirEnteroPositivo } from "../src/Simulador/Validaciones";
 
 describe("Validaciones", () => {
     it("exigir no hace nada si la condicion es verdadera", () => {

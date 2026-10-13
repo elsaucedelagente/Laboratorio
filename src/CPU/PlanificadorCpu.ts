@@ -1,4 +1,4 @@
-import { Proceso } from "./Proceso";
+import { Proceso } from "../Proceso/Proceso";
 
 // Que paso en la CPU durante un tick.
 export enum ResultadoCpu {

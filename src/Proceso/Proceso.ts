@@ -1,6 +1,6 @@
 import { EstadoProceso } from "./EstadoProceso";
 import { InfoProceso } from "./InfoProceso";
-import { exigir, exigirEnteroPositivo } from "./Validaciones";
+import { exigir, exigirEnteroPositivo } from "../Simulador/Validaciones";
 
 // Transiciones permitidas entre estados: para cada estado, a cuales puede pasar.
 const TRANSICIONES: Record<EstadoProceso, EstadoProceso[]> = {

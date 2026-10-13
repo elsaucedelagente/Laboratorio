@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BloqueMemoria } from "../src/BloqueMemoria";
-import { MejorAjuste } from "../src/MejorAjuste";
-import { PrimerAjuste } from "../src/PrimerAjuste";
-import { PeorAjuste } from "../src/PeorAjuste";
+import { BloqueMemoria } from "../src/Memoria/BloqueMemoria";
+import { MejorAjuste } from "../src/Memoria/MejorAjuste";
+import { PrimerAjuste } from "../src/Memoria/PrimerAjuste";
+import { PeorAjuste } from "../src/Memoria/PeorAjuste";
 
 // Bloques libres de 100, 300 y 150 KB, separados por bloques ocupados.
 const bloques = [

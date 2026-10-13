@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { EstadisticasCpu } from "../src/EstadisticasCpu";
+import { EstadisticasCpu } from "../src/CPU/EstadisticasCpu";
 
 describe("EstadisticasCpu", () => {
     it("arranca en el tick 0 con uso de CPU 0", () => {

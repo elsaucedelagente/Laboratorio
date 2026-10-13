@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { EventoES } from "../src/EventoES";
+import { EventoES } from "../src/Proceso/EventoES";
 
 describe("EventoES", () => {
     it("guarda el disparo y la duracion", () => {

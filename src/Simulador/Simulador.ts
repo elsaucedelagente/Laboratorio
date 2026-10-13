@@ -1,18 +1,18 @@
 import { ColasProcesos } from "./ColasProceso";
-import { EstadisticasCpu } from "./EstadisticasCpu";
-import { EstadoProceso } from "./EstadoProceso";
+import { EstadisticasCpu } from "../CPU/EstadisticasCpu";
+import { EstadoProceso } from "../Proceso/EstadoProceso";
 import { EstadoSistema } from "./EstadoSistema";
-import { EventoES } from "./EventoES";
-import { PrimerAjuste } from "./PrimerAjuste";
-import { GestorMemoria } from "./GestorMemoria";
-import { IGestorMemoria } from "./IGestorMemoria";
-import { InfoProceso } from "./InfoProceso";
-import { Metricas, MetricasSimulacion } from "./Metricas";
-import { PlanificadorCpu, ResultadoCpu } from "./PlanificadorCpu";
-import { PlanificadorRoundRobin } from "./PlanificadorRoundRobin";
-import { PoliticaAsignacion } from "./PoliticaAsignacion";
-import { Proceso } from "./Proceso";
-import { ProcesoConES } from "./ProcesoConES";
+import { EventoES } from "../Proceso/EventoES";
+import { PrimerAjuste } from "../Memoria/PrimerAjuste";
+import { GestorMemoria } from "../Memoria/GestorMemoria";
+import { IGestorMemoria } from "../Memoria/IGestorMemoria";
+import { InfoProceso } from "../Proceso/InfoProceso";
+import { Metricas, MetricasSimulacion } from "../Memoria/Metricas";
+import { PlanificadorCpu, ResultadoCpu } from "../CPU/PlanificadorCpu";
+import { PlanificadorRoundRobin } from "../CPU/PlanificadorRoundRobin";
+import { PoliticaAsignacion } from "../Memoria/PoliticaAsignacion";
+import { Proceso } from "../Proceso/Proceso";
+import { ProcesoConES } from "../Proceso/ProcesoConES";
 import { exigir, exigirEnteroPositivo } from "./Validaciones";
 
 // Orquestador de la simulacion: no asigna memoria ni planifica por su cuenta, se lo pide a cada colaborador. Avanza el tiempo tick por tick, siempre con las mismas fases en el mismo orden (RF06):

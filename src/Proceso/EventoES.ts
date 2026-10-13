@@ -1,4 +1,4 @@
-import { exigirEnteroPositivo } from "./Validaciones";
+import { exigirEnteroPositivo } from "../Simulador/Validaciones";
 
 // Evento de entrada/salida (RF08): cuando el proceso lleva `despuesDeTicks` ticks de CPU,
 // se bloquea durante `duracion` ticks. Es de solo lectura.

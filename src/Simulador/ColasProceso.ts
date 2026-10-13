@@ -1,5 +1,5 @@
-import { EstadoProceso } from "./EstadoProceso";
-import { Proceso } from "./Proceso";
+import { EstadoProceso } from "../Proceso/EstadoProceso";
+import { Proceso } from "../Proceso/Proceso";
 
 // Lleva el registro de todos los procesos (en orden de registro) y las listas de bloqueados y terminados.
 // Solo guarda y mueve procesos: no sabe de memoria ni de CPU.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { GestorMemoria } from "../src/GestorMemoria";
-import { PeorAjuste } from "../src/PeorAjuste";
+import { GestorMemoria } from "../src/Memoria/GestorMemoria";
+import { PeorAjuste } from "../src/Memoria/PeorAjuste";
 
 describe("GestorMemoria", () => {
     it("por defecto tiene 1024 KB, todo libre", () => {

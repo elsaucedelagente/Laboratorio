@@ -1,6 +1,6 @@
 import { EventoES } from "./EventoES";
 import { Proceso } from "./Proceso";
-import { exigir } from "./Validaciones";
+import { exigir } from "../Simulador/Validaciones";
 
 // Proceso que, ademas de CPU, hace una entrada/salida (RF08). Hereda todo de Proceso y solo
 // sobrescribe los ganchos de E/S: el simulador lo trata igual que a cualquier otro Proceso.

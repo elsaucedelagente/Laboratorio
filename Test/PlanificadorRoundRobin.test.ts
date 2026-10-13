@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { EstadoProceso } from "../src/EstadoProceso";
-import { EventoES } from "../src/EventoES";
-import { ResultadoCpu } from "../src/PlanificadorCpu";
-import { PlanificadorRoundRobin } from "../src/PlanificadorRoundRobin";
-import { Proceso } from "../src/Proceso";
-import { ProcesoConES } from "../src/ProcesoConES";
+import { EstadoProceso } from "../src/Proceso/EstadoProceso";
+import { EventoES } from "../src/Proceso/EventoES";
+import { ResultadoCpu } from "../src/CPU/PlanificadorCpu";
+import { PlanificadorRoundRobin } from "../src/CPU/PlanificadorRoundRobin";
+import { Proceso } from "../src/Proceso/Proceso";
+import { ProcesoConES } from "../src/Proceso/ProcesoConES";
 
 const listo = <T extends Proceso>(proceso: T): T => {
     proceso.cambiarEstado(EstadoProceso.ESPERANDO_MEMORIA);

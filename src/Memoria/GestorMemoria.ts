@@ -3,7 +3,7 @@ import { PrimerAjuste } from "./PrimerAjuste";
 import { IGestorMemoria } from "./IGestorMemoria";
 import { Metricas } from "./Metricas";
 import { PoliticaAsignacion } from "./PoliticaAsignacion";
-import { exigirEnteroPositivo } from "./Validaciones";
+import { exigirEnteroPositivo } from "../Simulador/Validaciones";
 
 // Memoria principal con asignacion contigua. Arranca con un unico bloque libre que ocupa todo.
 // La politica de asignacion se recibe por constructor (por defecto, Primer Ajuste).
