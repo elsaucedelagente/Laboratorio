@@ -152,3 +152,22 @@ describe("ProcesoConES: mas casos", () => {
     });
 
 });
+describe("Proceso: descripcion y bloqueo por defecto", () => {
+    it("describir muestra el pid y el estado", () => {
+        expect(new Proceso("P1", 100, 3).describir()).toBe("P1: NUEVO");
+    });
+
+    it("un proceso comun nunca queda bloqueado (avanzarBloqueo devuelve true)", () => {
+        expect(new Proceso("P1", 100, 3).avanzarBloqueo()).toBe(true);
+    });
+});
+
+describe("Proceso: ganchos de E/S por defecto", () => {
+    it("un proceso comun no se bloquea y bloquear() no cambia nada", () => {
+        const proceso = new Proceso("P1", 100, 3);
+        expect(proceso.debeBloquearse()).toBe(false);
+        proceso.bloquear();
+        expect(proceso.estado()).toBe(EstadoProceso.NUEVO);
+        expect(proceso.bloqueoRestante()).toBe(0);
+    });
+});

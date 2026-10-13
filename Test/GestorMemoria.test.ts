@@ -93,3 +93,12 @@ describe("GestorMemoria", () => {
         expect(gestor.mapa()).toEqual(["[0-1000 KB] LIBRE"]);
     });
 });
+describe("GestorMemoria: nombre de la politica", () => {
+    it("por defecto usa Primer-Ajuste", () => {
+        expect(new GestorMemoria().nombrePolitica()).toBe("Primer-Ajuste");
+    });
+
+    it("informa el nombre de la politica recibida", () => {
+        expect(new GestorMemoria(1000, new PeorAjuste()).nombrePolitica()).toBe("Peor-Ajuste");
+    });
+});
